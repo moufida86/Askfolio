@@ -1,16 +1,40 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <meta charset="UTF-8">
-        <title>{% block title %}Welcome!{% endblock %}</title>
-        <link rel="icon" href="data:image/svg+xml,<svg xmlns=%22http://www.w3.org/2000/svg%22 viewBox=%220 0 128 128%22><text y=%221.2em%22 font-size=%2296%22>⚫️</text></svg>">
-        {% block stylesheets %}
-        {% endblock %}
+	<head>
+		<meta charset="UTF-8">
+		<title>
+			{% block title %}Welcome!
+			{% endblock %}
+		</title>
+		<link rel="stylesheet" href="{{ asset('css/style.css') }}">
+		<script defer src="{{ asset('js/index.js') }}"></script>
+		<link rel="preconnect" href="https://fonts.googleapis.com">
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+		<link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Roboto:wght@400;500;700&family=Ysabeau+Infant:wght@700&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer"/>
 
-        {% block javascripts %}
-        {% endblock %}
-    </head>
-    <body>
-        {% block body %}{% endblock %}
-    </body>
-</html>
+	</head>
+	<body class="d-flex flex-column">
+	
+        {{ include ('partials/_header.html.twig') }}
+        
+
+
+		<div
+			class="flex-fill b2 d-flex flex-row-nowrap justify-content-center">
+			
+			<div class="content d-flex flex-rownorap flex-fill">
+                {{ include ('partials/_sidebar.html.twig') }}
+				<div class="flex-fill b4"> {% block body %}{% endblock %}
+
+					</div>
+				</div>
+			</div>
+
+			
+            {{ include ('partials/_footer.html.twig') }}
+
+
+
+		</body>
+	</html>
