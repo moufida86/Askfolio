@@ -16,6 +16,8 @@
     --gray:var(--color);
     --gray-dark:var(--color-dark);
     --max-width: 1200px;
+    --footer-backrougnd:#2980b9;
+    --font-size-small : 14px;
 
 }
 /*debug*/
@@ -31,7 +33,14 @@
 .b4 {
     background-color: orange;
 }
-
+.py-20 {
+    padding-top: 20px;
+    padding-bottom: 20px;
+}
+.py-50 {
+    padding-top: 50px;
+    padding-bottom: 50px;
+}
 
 /*reset*/
 *{
@@ -97,9 +106,15 @@ h1,h2,h3,h4,h5 {
 
     margin: 20px;
 }
-.mr-5{
+.mr-5 {
 margin-right: 5px;
 }
+.mr-20 {
+    margin-right: 20px;
+    }
+.mr-50 {
+        margin-right: 50px;
+        }
 /*paddding*/
 .p-5 {
    padding: 5px;
@@ -118,8 +133,32 @@ margin-right: 5px;
 /* sidebar*/
 .sidebar {
     min-width: 200px;
+
+}
+.sidebar-nav li{
+
+    padding: 10px;
+    cursor: pointer;
+    font-size: var(--font-size-small);
+    margin-bottom: 5px;
+
+}
+.sidebar-nav li i{
+
+    color: var(--color-dark);
+
+}
+.active {
+    border-left: 5px solid var(--primary);
+    background-color: var(--primary-light);
 }
 
+.sidebar-nav li:hover{
+
+    opacity: 0.8;
+    transition: opacity 0.4s;
+
+}
 /*header*/
 header{
     box-shadow: var(--box-shadow);
@@ -170,4 +209,12 @@ header{
     border: 1px solid var(--primary);
     color: var(--primary);
     background-color: white;
+}
+
+
+
+/*footer*/
+footer{
+    background-color: var(--footer-backrougnd);
+    color: var(--primary-light);
 }
